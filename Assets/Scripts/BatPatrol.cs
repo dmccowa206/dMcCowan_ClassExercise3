@@ -2,15 +2,15 @@ using UnityEngine;
 
 public class BatPatrol : MonoBehaviour
 {
-    [SerializeField] float moveSpeed = 0.05f;
-    [SerializeField] float turnSpeed = 0.05f;
-    [SerializeField] float turnTimer = 3f;
+    [SerializeField] float moveSpeed = 8.24668f;
+    [SerializeField] float turnSpeed = 90f;
+    [SerializeField] float turnTimer = 1f;
     bool canTurn = true;
     float timer = 0;
     void Update()
     {
-        transform.Translate(Vector3.forward * moveSpeed);
-        transform.Rotate(0, turnSpeed, 0);
+        transform.Translate(0, 0, moveSpeed * Time.deltaTime);
+        transform.Rotate(0, turnSpeed * Time.deltaTime, 0);
         if (Input.GetKey("r") && canTurn)
         {
             DirectionChange();

@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class Mover : MonoBehaviour
 {
-    [SerializeField] float moveSpeed = 0.05f;
-    [SerializeField] float turnSpeed = 0.5f;
-    [SerializeField] float jumpForce = 1f;
+    [SerializeField] float moveSpeed = 2f;
+    [SerializeField] float turnSpeed = 1f;
+    [SerializeField] float jumpForce = 300f;
     float moveVal, turnVal, kbX, kbY, kbZ;
     bool canJump = false;
     Rigidbody rb;
